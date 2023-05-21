@@ -24,30 +24,5 @@
         "cache_size": "float",
         "verbose": "bool",
         "max_iter": "bool"
-    },
-    "hyperparameter_exploration": [
-        {
-            "nu": [
-                0.1,
-                0.5,
-                1.0
-            ],
-            "kernel": [
-                "linear",
-                "rbf",
-                "sigmoid"
-            ]
-        },
-        {
-            "nu": [
-                0.1,
-                0.5,
-                1.0
-            ],
-            "kernel": [
-                "poly"
-            ],
-            "degree": [3, 5]
-        }
-    ]
+    }
 }

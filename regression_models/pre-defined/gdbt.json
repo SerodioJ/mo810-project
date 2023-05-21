@@ -3,7 +3,7 @@
     "module": "sklearn.ensemble.GradientBoostingRegressor",
     "parameters": {
         "loss": [
-            "squarred_error",
+            "squared_error",
             "absolute_error",
             "huber",
             "quantile"
@@ -47,14 +47,10 @@
     "hyperparameter_exploration": [
         {
             "loss": [
-                "squarred_error",
-                "absolute_error",
-                "huber",
-                "quantile"
+                "squared_error"
             ],
             "criterion": [
-                "squared_error",
-                "friedman_mse"
+                "squared_error"
             ],
             "learning_rate": [
                 0.1,
@@ -64,7 +60,20 @@
             ],
             "n_estimators": [
                 10,
-                100,
+                100
+            ]
+        },
+        {
+            "loss": [
+                "squared_error"
+            ],
+            "criterion": [
+                "squared_error"
+            ],
+            "learning_rate": [
+                0.1
+            ],
+            "n_estimators": [
                 200
             ]
         }

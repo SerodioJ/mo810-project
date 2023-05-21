@@ -6,12 +6,5 @@
         "copy_X": "bool",
         "n_jobs": "int",
         "positive": "bool"
-    },
-    "hyperparameter_exploration": [
-        {
-            "default": [
-                true
-            ]
-        }
-    ]
+    }
 }

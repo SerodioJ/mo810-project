@@ -18,22 +18,5 @@
         "metric": "str",
         "metric_params": "dict",
         "n_jobs": "int"
-    },
-    "hyperparameter_exploration": [
-        {
-            "radius": [
-                0.5,
-                1,
-                2
-            ],
-            "weights": [
-                "uniform",
-                "distance"
-            ],
-            "algorithm": [
-                "ball_tree",
-                "kd_tree"
-            ]
-        }
-    ]
+    }
 }

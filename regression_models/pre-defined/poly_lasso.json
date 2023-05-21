@@ -24,25 +24,5 @@
                 "degree": "int"
             }
         }
-    ],
-    "hyperparameter_exploration": [
-        {
-            "_pre_0_degree": [
-                2,
-                4,
-                8
-            ],
-            "alpha": [
-                0.1,
-                0.5,
-                1,
-                2,
-                5
-            ],
-            "selection": [
-                "cyclic",
-                "random"
-            ]
-        }
     ]
 }

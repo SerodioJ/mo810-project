@@ -22,11 +22,20 @@
     "hyperparameter_exploration": [
         {
             "n_neighbors": [
-                1,
-                5,
-                10,
-                50,
-                100
+                2,
+                10
+            ],
+            "weights": [
+                "uniform"
+            ],
+            "algorithm": [
+                "ball_tree",
+                "kd_tree"
+            ]
+        },
+        {
+            "n_neighbors": [
+                5
             ],
             "weights": [
                 "uniform",

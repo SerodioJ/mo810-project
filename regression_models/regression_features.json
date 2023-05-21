@@ -1,13 +1,5 @@
 {
     "env": {
-        "no_window": [
-            "raw"
-        ],
-        "window_1z": [
-            "raw",
-            "-1z_raw",
-            "1z_raw"
-        ],
         "window_2z": [
             "raw",
             "-1z_raw",
@@ -22,12 +14,6 @@
             "-2z_raw",
             "2z_raw",
             "-3z_raw",
-            "3z_raw"
-        ],
-        "window_3z_fonly": [
-            "raw",
-            "1z_raw",
-            "2z_raw",
             "3z_raw"
         ],
         "window_3z_bonly": [
@@ -38,14 +24,6 @@
         ]
     },
     "cos": {
-        "no_window": [
-            "raw"
-        ],
-        "window_1z": [
-            "raw",
-            "-1z_raw",
-            "1z_raw"
-        ],
         "window_2z": [
             "raw",
             "-1z_raw",
@@ -62,12 +40,6 @@
             "-3z_raw",
             "3z_raw"
         ],
-        "window_3z_fonly": [
-            "raw",
-            "1z_raw",
-            "2z_raw",
-            "3z_raw"
-        ],
         "window_3z_bonly": [
             "raw",
             "-1z_raw",
@@ -76,21 +48,6 @@
         ]
     },
     "freq": {
-        "no_window": [
-            "raw"
-        ],
-        "window_1z": [
-            "raw",
-            "-1z_raw",
-            "1z_raw"
-        ],
-        "window_2z": [
-            "raw",
-            "-1z_raw",
-            "1z_raw",
-            "-2z_raw",
-            "2z_raw"
-        ],
         "window_3z": [
             "raw",
             "-1z_raw",

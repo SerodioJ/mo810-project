@@ -20,24 +20,5 @@
         ],
         "positive": "bool",
         "random_state": "int"
-    },
-    "hyperparameter_exploration": [
-        {
-            "alpha": [
-                0.1,
-                0.5,
-                1,
-                2,
-                5,
-                10
-            ],
-            "solver": [
-                "svd",
-                "cholesky",
-                "lsqr",
-                "sag",
-                "lbfgs"
-            ]
-        }
-    ]
+    }
 }
