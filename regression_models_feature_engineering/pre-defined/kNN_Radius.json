@@ -1,0 +1,22 @@
+{
+    "name": "k Nearest Neighbors Radius Regressor",
+    "module": "sklearn.neighbors.RadiusNeighborsRegressor",
+    "parameters": {
+        "radius": "float",
+        "weights": [
+            "uniform",
+            "distance"
+        ],
+        "algorithm": [
+            "auto",
+            "ball_tree",
+            "kd_tree",
+            "brute"
+        ],
+        "leaf_size": "int",
+        "p": "int",
+        "metric": "str",
+        "metric_params": "dict",
+        "n_jobs": "int"
+    }
+}

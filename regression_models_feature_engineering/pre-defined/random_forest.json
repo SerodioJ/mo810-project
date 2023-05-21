@@ -1,0 +1,50 @@
+{
+    "name": "Random Forest Regressor",
+    "module": "sklearn.ensemble.RandomForestRegressor",
+    "parameters": {
+        "n_estimators": "int",
+        "criterion": [
+            "squared_error",
+            "friedman_mse",
+            "absolute_error",
+            "poisson"
+        ],
+        "max_depth": "int",
+        "min_samples_split": [
+            "int",
+            "float"
+        ],
+        "min_samples_leaf": [
+            "int",
+            "float"
+        ],
+        "min_weight_fraction_leaf": "float",
+        "max_features": [
+            "int",
+            "float",
+            "auto",
+            "sqrt",
+            "log2"
+        ],
+        "max_leaf_nodes": "int",
+        "min_impurity_decrease": "float",
+        "boostrap": "bool",
+        "oob_score": "bool",
+        "n_jobs": "int",
+        "random_state": "int",
+        "verbose": "int",
+        "warm_start": "bool",
+        "ccp_alpha": "float",
+        "max_samples": [
+            "int",
+            "float"
+        ]
+    },
+    "hyperparameter_exploration": [
+        {
+            "max_depth": [
+                20
+            ]
+        }
+    ]
+}

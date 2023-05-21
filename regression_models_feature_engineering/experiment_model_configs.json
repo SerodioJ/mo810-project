@@ -1,0 +1,74 @@
+{
+    "kNN_K-0": {
+        "default": true
+    },
+    "linear_regression-0": {
+        "default": true
+    },
+    "gdbt-0": {
+        "default": true
+    },
+    "poly_ridge-0": {
+        "_pre_0_degree": 2
+    },
+    "poly_ridge-1": {
+        "_pre_0_degree": 4
+    },
+    "poly_ridge-2": {
+        "_pre_0_degree": 8
+    },
+    "decision_tree-0": {
+        "default": true
+    },
+    "random_forest-0": {
+        "max_depth": 20
+    },
+    "kNN_Radius-0": {
+        "default": true
+    },
+    "svm_LinearSVR-0": {
+        "default": true
+    },
+    "lasso-0": {
+        "default": true
+    },
+    "ridge-0": {
+        "default": true
+    },
+    "poly_linear_regression-0": {
+        "_pre_0_degree": 2
+    },
+    "poly_linear_regression-1": {
+        "_pre_0_degree": 3
+    },
+    "poly_linear_regression-2": {
+        "_pre_0_degree": 4
+    },
+    "poly_linear_regression-3": {
+        "_pre_0_degree": 5
+    },
+    "poly_linear_regression-4": {
+        "_pre_0_degree": 6
+    },
+    "poly_linear_regression-5": {
+        "_pre_0_degree": 7
+    },
+    "poly_linear_regression-6": {
+        "_pre_0_degree": 8
+    },
+    "poly_linear_regression-7": {
+        "_pre_0_degree": 9
+    },
+    "poly_linear_regression-8": {
+        "_pre_0_degree": 10
+    },
+    "poly_lasso-0": {
+        "_pre_0_degree": 2
+    },
+    "poly_lasso-1": {
+        "_pre_0_degree": 4
+    },
+    "poly_lasso-2": {
+        "_pre_0_degree": 8
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "Ridge Linear Regression",
+    "module": "sklearn.linear_model.Ridge",
+    "parameters": {
+        "alpha": [
+            "float",
+            "array:float"
+        ],
+        "fit_intercept": "bool",
+        "copy_X": "bool",
+        "max_iter": "int",
+        "tol": "float",
+        "solver": [
+            "auto",
+            "svd",
+            "cholesky",
+            "lsqr",
+            "sag",
+            "lbfgs"
+        ],
+        "positive": "bool",
+        "random_state": "int"
+    },
+    "hyperparameter_exploration": [
+        {
+            "default": [
+                true
+            ]
+        }
+    ]
+}

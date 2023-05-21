@@ -1,0 +1,37 @@
+{
+    "name": "Polynomial Lasso Linear Regression",
+    "module": "sklearn.linear_model.Lasso",
+    "parameters": {
+        "alpha": "float",
+        "fit_intercept": "bool",
+        "precompute": "bool",
+        "copy_X": "bool",
+        "max_iter": "int",
+        "tol": "float",
+        "warm_start": "bool",
+        "positive": "bool",
+        "random_state": "int",
+        "selection": [
+            "cyclic",
+            "random"
+        ]
+    },
+    "preprocessing": [
+        {
+            "name": "Polynomial Feature",
+            "module": "sklearn.preprocessing.PolynomialFeatures",
+            "parameters": {
+                "degree": "int"
+            }
+        }
+    ],
+    "hyperparameter_exploration": [
+        {
+            "_pre_0_degree": [
+                2,
+                4,
+                8
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Linear Support Vector Regressor",
+    "module": "sklearn.svm.LinearSVR",
+    "parameters": {
+        "epsilon": "float",
+        "tol": "float",
+        "C": "float",
+        "loss": [
+            "epsilon_insensitive",
+            "squared_epsilon_insensitive"
+        ],
+        "fit_intercept": "bool",
+        "intercep_scaling": "float",
+        "dual": "bool",
+        "verbose": "bool",
+        "random_state": "int",
+        "max_iter": "bool"
+    },
+    "hyperparameter_exploration": [
+        {
+            "default": [
+                true
+            ]
+        }
+    ]
+}
