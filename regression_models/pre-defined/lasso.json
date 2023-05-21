@@ -1,0 +1,36 @@
+{
+    "name": "Lasso Linear Regression",
+    "module": "sklearn.linear_model.Lasso",
+    "parameters": {
+        "alpha": "float",
+        "fit_intercept": "bool",
+        "precompute": "bool",
+        "copy_X": "bool",
+        "max_iter": "int",
+        "tol": "float",
+        "warm_start": "bool",
+        "positive": "bool",
+        "random_state": "int",
+        "selection": [
+            "cyclic",
+            "random"
+        ]
+    },
+    "hyperparameter_exploration": [
+        {
+            "alpha": [
+                0.05,
+                0.1,
+                0.5,
+                1,
+                2,
+                5,
+                10
+            ],
+            "selection": [
+                "cyclic",
+                "random"
+            ]
+        }
+    ]
+}

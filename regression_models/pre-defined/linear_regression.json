@@ -1,0 +1,17 @@
+{
+    "name": "Linear Regression",
+    "module": "sklearn.linear_model.LinearRegression",
+    "parameters": {
+        "fit_intercept": "bool",
+        "copy_X": "bool",
+        "n_jobs": "int",
+        "positive": "bool"
+    },
+    "hyperparameter_exploration": [
+        {
+            "default": [
+                true
+            ]
+        }
+    ]
+}

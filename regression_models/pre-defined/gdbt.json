@@ -1,0 +1,73 @@
+{
+    "name": "Gradient Boosting Decision Tree Regressor",
+    "module": "sklearn.ensemble.GradientBoostingRegressor",
+    "parameters": {
+        "loss": [
+            "squarred_error",
+            "absolute_error",
+            "huber",
+            "quantile"
+        ],
+        "learning_rate": "float",
+        "n_estimators": "int",
+        "subsample": "float",
+        "criterion": [
+            "squared_error",
+            "friedman_mse"
+        ],
+        "min_samples_split": [
+            "int",
+            "float"
+        ],
+        "min_samples_leaf": [
+            "int",
+            "float"
+        ],
+        "min_weight_fraction_leaf": "float",
+        "max_depth": "int",
+        "min_impurity_decrease": "float",
+        "init": "estimator",
+        "random_state": "int",
+        "max_features": [
+            "int",
+            "float",
+            "auto",
+            "sqrt",
+            "log2"
+        ],
+        "alpha": "float",
+        "verbose": "int",
+        "max_leaf_nodes": "int",
+        "warm_start": "bool",
+        "validation_fraction": "float",
+        "n_iter_no_change": "int",
+        "tol": "float",
+        "ccp_alpha": "float"
+    },
+    "hyperparameter_exploration": [
+        {
+            "loss": [
+                "squarred_error",
+                "absolute_error",
+                "huber",
+                "quantile"
+            ],
+            "criterion": [
+                "squared_error",
+                "friedman_mse"
+            ],
+            "learning_rate": [
+                0.1,
+                0.5,
+                1,
+                2,
+                5
+            ],
+            "n_estimators": [
+                10,
+                100,
+                200
+            ]
+        }
+    ]
+}

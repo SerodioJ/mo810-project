@@ -1,0 +1,57 @@
+{
+    "name": "Decision Tree",
+    "module": "sklearn.tree.DecisionTreeRegressor",
+    "parameters": {
+        "criterion": [
+            "squared_error",
+            "friedman_mse",
+            "absolute_error",
+            "poisson"
+        ],
+        "splitter": [
+            "best",
+            "random"
+        ],
+        "max_depth": "int",
+        "min_samples_split": [
+            "int",
+            "float"
+        ],
+        "min_samples_leaf": [
+            "int",
+            "float"
+        ],
+        "min_weight_fraction_leaf": "float",
+        "max_features": [
+            "int",
+            "float",
+            "auto",
+            "sqrt",
+            "log2"
+        ],
+        "random_state": "int",
+        "max_leaf_nodes": "int",
+        "min_impurity_decrease": "float",
+        "ccp_alpha": "float"
+    },
+    "hyperparameter_exploration": [
+        {
+            "criterion": [
+                "squared_error",
+                "friedman_mse",
+                "absolute_error",
+                "poisson"
+            ],
+            "splitter": [
+                "best",
+                "random"
+            ],
+            "max_depth": [
+                5,
+                10,
+                20,
+                null
+            ]
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "Support Vector Regressor",
+    "module": "sklearn.svm.SVR",
+    "parameters": {
+        "kernel": [
+            "linear",
+            "poly",
+            "rbf",
+            "sigmoid",
+            "precomputed"
+        ],
+        "degree": "int",
+        "gamma": [
+            "scale",
+            "auto",
+            "float"
+        ],
+        "coef_0": "float",
+        "tol": "float",
+        "C": "float",
+        "epsilon": "float",
+        "shrinking": "bool",
+        "cache_size": "float",
+        "verbose": "bool",
+        "max_iter": "bool"
+    },
+    "hyperparameter_exploration": [
+        {
+            "epsilon": [
+                0.1,
+                1.0
+            ],
+            "kernel": [
+                "linear",
+                "rbf",
+                "sigmoid",
+                "precomputed"
+            ]
+        },
+        {
+            "epsilon": [
+                0.1,
+                1.0
+            ],
+            "kernel": [
+                "poly"
+            ],
+            "degree": [
+                3,
+                5
+            ]
+        }
+    ]
+}
