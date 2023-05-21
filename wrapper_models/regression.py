@@ -51,9 +51,8 @@ class Regressor:
         y_pred = self.model.predict(X)
         return y_pred
 
-    @classmethod
-    def compute_metrics(cls, y_pred, y_hat):
+    def compute_metrics(self, y_pred, y_hat):
         results = []
-        for metric in cls.metrics.values():
+        for metric in self.metrics.values():
             results.append(metric(y_hat, y_pred))
         return results

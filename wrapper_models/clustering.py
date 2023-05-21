@@ -3,8 +3,11 @@ from importlib import import_module
 
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import f1_score, accuracy_score, precision_score, homogeneity_score
-from dask_ml.wrappers import ParallelPostFit
+from sklearn.metrics import (
+    homogeneity_completeness_v_measure,
+    rand_score,
+    silhouette_score,
+)
 
 from utils import split_module_class
 
@@ -12,10 +15,11 @@ from utils import split_module_class
 class Cluster:
 
     metrics = {
-        "homogeneity": homogeneity_score,
-        "f1": f1_score,
-        "accuracy": accuracy_score,
-        "precision": precision_score,
+        "homogeneity": (2, homogeneity_completeness_v_measure),
+        "completeness": (2, homogeneity_completeness_v_measure),
+        "v_measure": (2, homogeneity_completeness_v_measure),
+        "rand": (1, rand_score),
+        "inertia": (0, None),
     }
 
     def __init__(
@@ -38,24 +42,30 @@ class Cluster:
             missing_values=np.nan, strategy="constant", fill_value=0.0, copy=False
         )
         if pre_stages:
-            self.model = ParallelPostFit(
-                Pipeline([("nan_fix", imputer), *pre_stages, ("regresion", self.model)])
+            self.model = Pipeline(
+                [("nan_fix", imputer), *pre_stages, ("regresion", self.model)]
             )
         else:
-            self.model = ParallelPostFit(
-                Pipeline([("nan_fix", imputer), ("regresion", self.model)])
-            )
+            self.model = Pipeline([("nan_fix", imputer), ("regresion", self.model)])
 
-    def fit(self, X, y):
-        self.model.fit(X)
+    def fit_predict(self, X):
+        return self.model.fit_predict(X)
 
-    def predict(self, X):
-        y_pred = self.model.predict(X)
-        return y_pred
-
-    @classmethod
-    def compute_metrics(cls, y_pred, y_hat):
+    def compute_metrics(self, y_pred, y_hat):
         results = []
-        for metric in cls.metrics.values():
-            results.append(metric(y_hat, y_pred))
+        repeated = []
+        for t, metric in self.metrics.values():
+            if t == 0:
+                if hasattr(self.model, "inertia__"):
+                    results.append(self.model.inertia_)
+                else:
+                    results.append(0)
+            if t == 1:
+                results.append(metric(y_hat, y_pred))
+            else:
+                if t in repeated:
+                    continue
+                repeated.append(t)
+                results.extend(metric(y_hat, y_pred))
+
         return results
