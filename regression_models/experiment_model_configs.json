@@ -2,39 +2,19 @@
     "kNN_K-0": {
         "n_neighbors": 2,
         "weights": "uniform",
-        "algorithm": "ball_tree"
+        "algorithm": "kd_tree"
     },
     "kNN_K-1": {
-        "n_neighbors": 2,
+        "n_neighbors": 10,
         "weights": "uniform",
         "algorithm": "kd_tree"
     },
     "kNN_K-2": {
-        "n_neighbors": 10,
+        "n_neighbors": 5,
         "weights": "uniform",
-        "algorithm": "ball_tree"
+        "algorithm": "kd_tree"
     },
     "kNN_K-3": {
-        "n_neighbors": 10,
-        "weights": "uniform",
-        "algorithm": "kd_tree"
-    },
-    "kNN_K-4": {
-        "n_neighbors": 5,
-        "weights": "uniform",
-        "algorithm": "ball_tree"
-    },
-    "kNN_K-5": {
-        "n_neighbors": 5,
-        "weights": "uniform",
-        "algorithm": "kd_tree"
-    },
-    "kNN_K-6": {
-        "n_neighbors": 5,
-        "weights": "distance",
-        "algorithm": "ball_tree"
-    },
-    "kNN_K-7": {
         "n_neighbors": 5,
         "weights": "distance",
         "algorithm": "kd_tree"
@@ -100,86 +80,56 @@
     },
     "poly_ridge-1": {
         "_pre_0_degree": 4,
-        "alpha": 0.5,
-        "solver": "lsqr"
-    },
-    "poly_ridge-2": {
-        "_pre_0_degree": 4,
-        "alpha": 0.5,
-        "solver": "sag"
-    },
-    "poly_ridge-3": {
-        "_pre_0_degree": 4,
         "alpha": 1,
         "solver": "svd"
     },
-    "poly_ridge-4": {
+    "poly_ridge-2": {
         "_pre_0_degree": 4,
+        "alpha": 2,
+        "solver": "svd"
+    },
+    "poly_ridge-3": {
+        "_pre_0_degree": 8,
+        "alpha": 0.5,
+        "solver": "svd"
+    },
+    "poly_ridge-4": {
+        "_pre_0_degree": 8,
         "alpha": 1,
-        "solver": "lsqr"
+        "solver": "svd"
     },
     "poly_ridge-5": {
-        "_pre_0_degree": 4,
-        "alpha": 1,
-        "solver": "sag"
+        "_pre_0_degree": 8,
+        "alpha": 2,
+        "solver": "svd"
     },
     "poly_ridge-6": {
         "_pre_0_degree": 4,
-        "alpha": 2,
+        "alpha": 0.5,
         "solver": "svd"
     },
     "poly_ridge-7": {
         "_pre_0_degree": 4,
-        "alpha": 2,
+        "alpha": 0.5,
         "solver": "lsqr"
     },
     "poly_ridge-8": {
         "_pre_0_degree": 4,
-        "alpha": 2,
+        "alpha": 0.5,
         "solver": "sag"
     },
     "poly_ridge-9": {
-        "_pre_0_degree": 8,
-        "alpha": 0.5,
+        "_pre_0_degree": 4,
+        "alpha": 2,
         "solver": "svd"
     },
     "poly_ridge-10": {
-        "_pre_0_degree": 8,
-        "alpha": 0.5,
+        "_pre_0_degree": 4,
+        "alpha": 2,
         "solver": "lsqr"
     },
     "poly_ridge-11": {
-        "_pre_0_degree": 8,
-        "alpha": 0.5,
-        "solver": "sag"
-    },
-    "poly_ridge-12": {
-        "_pre_0_degree": 8,
-        "alpha": 1,
-        "solver": "svd"
-    },
-    "poly_ridge-13": {
-        "_pre_0_degree": 8,
-        "alpha": 1,
-        "solver": "lsqr"
-    },
-    "poly_ridge-14": {
-        "_pre_0_degree": 8,
-        "alpha": 1,
-        "solver": "sag"
-    },
-    "poly_ridge-15": {
-        "_pre_0_degree": 8,
-        "alpha": 2,
-        "solver": "svd"
-    },
-    "poly_ridge-16": {
-        "_pre_0_degree": 8,
-        "alpha": 2,
-        "solver": "lsqr"
-    },
-    "poly_ridge-17": {
-        "_pre_0_degree": 8,
+        "_pre_0_degree": 4,
         "alpha": 2,
         "solver": "sag"
     },
@@ -266,70 +216,50 @@
     "random_forest-0": {
         "n_estimators": 200,
         "criterion": "squared_error",
-        "max_depth": 5
+        "max_depth": 10
     },
     "random_forest-1": {
-        "n_estimators": 200,
-        "criterion": "squared_error",
-        "max_depth": 10
-    },
-    "random_forest-2": {
-        "n_estimators": 50,
+        "n_estimators": 100,
         "criterion": "squared_error",
         "max_depth": 5
     },
-    "random_forest-3": {
-        "n_estimators": 50,
+    "random_forest-2": {
+        "n_estimators": 100,
         "criterion": "squared_error",
         "max_depth": 10
+    },
+    "random_forest-3": {
+        "n_estimators": 100,
+        "criterion": "squared_error",
+        "max_depth": 20
     },
     "random_forest-4": {
         "n_estimators": 50,
         "criterion": "squared_error",
-        "max_depth": 20
+        "max_depth": 5
     },
     "random_forest-5": {
         "n_estimators": 50,
-        "criterion": "friedman_mse",
-        "max_depth": 5
+        "criterion": "squared_error",
+        "max_depth": 10
     },
     "random_forest-6": {
         "n_estimators": 50,
-        "criterion": "friedman_mse",
-        "max_depth": 10
+        "criterion": "squared_error",
+        "max_depth": 20
     },
     "random_forest-7": {
         "n_estimators": 50,
         "criterion": "friedman_mse",
-        "max_depth": 20
+        "max_depth": 5
     },
     "random_forest-8": {
-        "n_estimators": 100,
-        "criterion": "squared_error",
-        "max_depth": 5
+        "n_estimators": 50,
+        "criterion": "friedman_mse",
+        "max_depth": 10
     },
     "random_forest-9": {
-        "n_estimators": 100,
-        "criterion": "squared_error",
-        "max_depth": 10
-    },
-    "random_forest-10": {
-        "n_estimators": 100,
-        "criterion": "squared_error",
-        "max_depth": 20
-    },
-    "random_forest-11": {
-        "n_estimators": 100,
-        "criterion": "friedman_mse",
-        "max_depth": 5
-    },
-    "random_forest-12": {
-        "n_estimators": 100,
-        "criterion": "friedman_mse",
-        "max_depth": 10
-    },
-    "random_forest-13": {
-        "n_estimators": 100,
+        "n_estimators": 50,
         "criterion": "friedman_mse",
         "max_depth": 20
     },

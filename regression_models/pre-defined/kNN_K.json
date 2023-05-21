@@ -29,7 +29,6 @@
                 "uniform"
             ],
             "algorithm": [
-                "ball_tree",
                 "kd_tree"
             ]
         },
@@ -42,7 +41,6 @@
                 "distance"
             ],
             "algorithm": [
-                "ball_tree",
                 "kd_tree"
             ]
         }

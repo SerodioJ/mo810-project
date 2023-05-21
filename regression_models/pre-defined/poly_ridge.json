@@ -43,6 +43,18 @@
                 2
             ],
             "solver": [
+                "svd"
+            ]
+        },
+        {
+            "_pre_0_degree": [
+                4
+            ],
+            "alpha": [
+                0.5,
+                2
+            ],
+            "solver": [
                 "svd",
                 "lsqr",
                 "sag"
