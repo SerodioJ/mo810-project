@@ -286,7 +286,7 @@ class TrainingRun:
                 csv_columns,
                 args.training_path,
                 args.base_dataset,
-                args.numbers_dataset,
+                args.number_datasets,
             )
 
     def regression(self, args):
@@ -320,7 +320,7 @@ class TrainingRun:
                 csv_columns,
                 args.training_path,
                 args.base_dataset,
-                args.numbers_dataset,
+                args.number_datasets,
             )
 
 

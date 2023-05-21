@@ -32,8 +32,7 @@
             ],
             "algorithm": [
                 "ball_tree",
-                "kd_tree",
-                "brute"
+                "kd_tree"
             ]
         }
     ]

@@ -11,143 +11,93 @@
     },
     "kNN_K-2": {
         "n_neighbors": 1,
-        "weights": "uniform",
-        "algorithm": "brute"
+        "weights": "distance",
+        "algorithm": "ball_tree"
     },
     "kNN_K-3": {
         "n_neighbors": 1,
         "weights": "distance",
-        "algorithm": "ball_tree"
-    },
-    "kNN_K-4": {
-        "n_neighbors": 1,
-        "weights": "distance",
         "algorithm": "kd_tree"
     },
+    "kNN_K-4": {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "algorithm": "ball_tree"
+    },
     "kNN_K-5": {
-        "n_neighbors": 1,
-        "weights": "distance",
-        "algorithm": "brute"
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "algorithm": "kd_tree"
     },
     "kNN_K-6": {
         "n_neighbors": 5,
-        "weights": "uniform",
+        "weights": "distance",
         "algorithm": "ball_tree"
     },
     "kNN_K-7": {
         "n_neighbors": 5,
-        "weights": "uniform",
+        "weights": "distance",
         "algorithm": "kd_tree"
     },
     "kNN_K-8": {
-        "n_neighbors": 5,
+        "n_neighbors": 10,
         "weights": "uniform",
-        "algorithm": "brute"
+        "algorithm": "ball_tree"
     },
     "kNN_K-9": {
-        "n_neighbors": 5,
+        "n_neighbors": 10,
+        "weights": "uniform",
+        "algorithm": "kd_tree"
+    },
+    "kNN_K-10": {
+        "n_neighbors": 10,
         "weights": "distance",
         "algorithm": "ball_tree"
     },
-    "kNN_K-10": {
-        "n_neighbors": 5,
+    "kNN_K-11": {
+        "n_neighbors": 10,
         "weights": "distance",
         "algorithm": "kd_tree"
     },
-    "kNN_K-11": {
-        "n_neighbors": 5,
-        "weights": "distance",
-        "algorithm": "brute"
-    },
     "kNN_K-12": {
-        "n_neighbors": 10,
+        "n_neighbors": 50,
         "weights": "uniform",
         "algorithm": "ball_tree"
     },
     "kNN_K-13": {
-        "n_neighbors": 10,
+        "n_neighbors": 50,
         "weights": "uniform",
         "algorithm": "kd_tree"
     },
     "kNN_K-14": {
-        "n_neighbors": 10,
-        "weights": "uniform",
-        "algorithm": "brute"
-    },
-    "kNN_K-15": {
-        "n_neighbors": 10,
+        "n_neighbors": 50,
         "weights": "distance",
         "algorithm": "ball_tree"
     },
-    "kNN_K-16": {
-        "n_neighbors": 10,
+    "kNN_K-15": {
+        "n_neighbors": 50,
         "weights": "distance",
         "algorithm": "kd_tree"
     },
+    "kNN_K-16": {
+        "n_neighbors": 100,
+        "weights": "uniform",
+        "algorithm": "ball_tree"
+    },
     "kNN_K-17": {
-        "n_neighbors": 10,
-        "weights": "distance",
-        "algorithm": "brute"
+        "n_neighbors": 100,
+        "weights": "uniform",
+        "algorithm": "kd_tree"
     },
     "kNN_K-18": {
-        "n_neighbors": 50,
-        "weights": "uniform",
+        "n_neighbors": 100,
+        "weights": "distance",
         "algorithm": "ball_tree"
     },
     "kNN_K-19": {
-        "n_neighbors": 50,
-        "weights": "uniform",
-        "algorithm": "kd_tree"
-    },
-    "kNN_K-20": {
-        "n_neighbors": 50,
-        "weights": "uniform",
-        "algorithm": "brute"
-    },
-    "kNN_K-21": {
-        "n_neighbors": 50,
-        "weights": "distance",
-        "algorithm": "ball_tree"
-    },
-    "kNN_K-22": {
-        "n_neighbors": 50,
-        "weights": "distance",
-        "algorithm": "kd_tree"
-    },
-    "kNN_K-23": {
-        "n_neighbors": 50,
-        "weights": "distance",
-        "algorithm": "brute"
-    },
-    "kNN_K-24": {
-        "n_neighbors": 100,
-        "weights": "uniform",
-        "algorithm": "ball_tree"
-    },
-    "kNN_K-25": {
-        "n_neighbors": 100,
-        "weights": "uniform",
-        "algorithm": "kd_tree"
-    },
-    "kNN_K-26": {
-        "n_neighbors": 100,
-        "weights": "uniform",
-        "algorithm": "brute"
-    },
-    "kNN_K-27": {
-        "n_neighbors": 100,
-        "weights": "distance",
-        "algorithm": "ball_tree"
-    },
-    "kNN_K-28": {
         "n_neighbors": 100,
         "weights": "distance",
         "algorithm": "kd_tree"
-    },
-    "kNN_K-29": {
-        "n_neighbors": 100,
-        "weights": "distance",
-        "algorithm": "brute"
     },
     "linear_regression-0": {
         "default": true
@@ -226,650 +176,506 @@
     },
     "gdbt-12": {
         "loss": "squarred_error",
-        "criterion": "squared_error",
-        "learning_rate": 5,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
         "n_estimators": 10
     },
     "gdbt-13": {
         "loss": "squarred_error",
-        "criterion": "squared_error",
-        "learning_rate": 5,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
         "n_estimators": 100
     },
     "gdbt-14": {
         "loss": "squarred_error",
-        "criterion": "squared_error",
-        "learning_rate": 5,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
         "n_estimators": 200
     },
     "gdbt-15": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "learning_rate": 0.5,
         "n_estimators": 10
     },
     "gdbt-16": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "learning_rate": 0.5,
         "n_estimators": 100
     },
     "gdbt-17": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "learning_rate": 0.5,
         "n_estimators": 200
     },
     "gdbt-18": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.5,
+        "learning_rate": 1,
         "n_estimators": 10
     },
     "gdbt-19": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.5,
+        "learning_rate": 1,
         "n_estimators": 100
     },
     "gdbt-20": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.5,
+        "learning_rate": 1,
         "n_estimators": 200
     },
     "gdbt-21": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 1,
+        "learning_rate": 2,
         "n_estimators": 10
     },
     "gdbt-22": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 1,
+        "learning_rate": 2,
         "n_estimators": 100
     },
     "gdbt-23": {
         "loss": "squarred_error",
         "criterion": "friedman_mse",
-        "learning_rate": 1,
+        "learning_rate": 2,
         "n_estimators": 200
     },
     "gdbt-24": {
-        "loss": "squarred_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
+        "loss": "absolute_error",
+        "criterion": "squared_error",
+        "learning_rate": 0.1,
         "n_estimators": 10
     },
     "gdbt-25": {
-        "loss": "squarred_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
+        "loss": "absolute_error",
+        "criterion": "squared_error",
+        "learning_rate": 0.1,
         "n_estimators": 100
     },
     "gdbt-26": {
-        "loss": "squarred_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
+        "loss": "absolute_error",
+        "criterion": "squared_error",
+        "learning_rate": 0.1,
         "n_estimators": 200
     },
     "gdbt-27": {
-        "loss": "squarred_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "loss": "absolute_error",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 10
     },
     "gdbt-28": {
-        "loss": "squarred_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "loss": "absolute_error",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 100
     },
     "gdbt-29": {
-        "loss": "squarred_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "loss": "absolute_error",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 200
     },
     "gdbt-30": {
         "loss": "absolute_error",
         "criterion": "squared_error",
-        "learning_rate": 0.1,
+        "learning_rate": 1,
         "n_estimators": 10
     },
     "gdbt-31": {
         "loss": "absolute_error",
         "criterion": "squared_error",
-        "learning_rate": 0.1,
+        "learning_rate": 1,
         "n_estimators": 100
     },
     "gdbt-32": {
         "loss": "absolute_error",
         "criterion": "squared_error",
-        "learning_rate": 0.1,
+        "learning_rate": 1,
         "n_estimators": 200
     },
     "gdbt-33": {
         "loss": "absolute_error",
         "criterion": "squared_error",
-        "learning_rate": 0.5,
+        "learning_rate": 2,
         "n_estimators": 10
     },
     "gdbt-34": {
         "loss": "absolute_error",
         "criterion": "squared_error",
-        "learning_rate": 0.5,
+        "learning_rate": 2,
         "n_estimators": 100
     },
     "gdbt-35": {
         "loss": "absolute_error",
         "criterion": "squared_error",
-        "learning_rate": 0.5,
+        "learning_rate": 2,
         "n_estimators": 200
     },
     "gdbt-36": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 1,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
         "n_estimators": 10
     },
     "gdbt-37": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 1,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
         "n_estimators": 100
     },
     "gdbt-38": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 1,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
         "n_estimators": 200
     },
     "gdbt-39": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 2,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.5,
         "n_estimators": 10
     },
     "gdbt-40": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 2,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.5,
         "n_estimators": 100
     },
     "gdbt-41": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 2,
+        "criterion": "friedman_mse",
+        "learning_rate": 0.5,
         "n_estimators": 200
     },
     "gdbt-42": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 5,
+        "criterion": "friedman_mse",
+        "learning_rate": 1,
         "n_estimators": 10
     },
     "gdbt-43": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 5,
+        "criterion": "friedman_mse",
+        "learning_rate": 1,
         "n_estimators": 100
     },
     "gdbt-44": {
         "loss": "absolute_error",
-        "criterion": "squared_error",
-        "learning_rate": 5,
+        "criterion": "friedman_mse",
+        "learning_rate": 1,
         "n_estimators": 200
     },
     "gdbt-45": {
         "loss": "absolute_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "learning_rate": 2,
         "n_estimators": 10
     },
     "gdbt-46": {
         "loss": "absolute_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "learning_rate": 2,
         "n_estimators": 100
     },
     "gdbt-47": {
         "loss": "absolute_error",
         "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "learning_rate": 2,
         "n_estimators": 200
     },
     "gdbt-48": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 0.1,
         "n_estimators": 10
     },
     "gdbt-49": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 0.1,
         "n_estimators": 100
     },
     "gdbt-50": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 0.1,
         "n_estimators": 200
     },
     "gdbt-51": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 10
     },
     "gdbt-52": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 100
     },
     "gdbt-53": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 200
     },
     "gdbt-54": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 1,
         "n_estimators": 10
     },
     "gdbt-55": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 1,
         "n_estimators": 100
     },
     "gdbt-56": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 1,
         "n_estimators": 200
     },
     "gdbt-57": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 2,
         "n_estimators": 10
     },
     "gdbt-58": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 2,
         "n_estimators": 100
     },
     "gdbt-59": {
-        "loss": "absolute_error",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "loss": "huber",
+        "criterion": "squared_error",
+        "learning_rate": 2,
         "n_estimators": 200
     },
     "gdbt-60": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 0.1,
         "n_estimators": 10
     },
     "gdbt-61": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 0.1,
         "n_estimators": 100
     },
     "gdbt-62": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 0.1,
         "n_estimators": 200
     },
     "gdbt-63": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 0.5,
         "n_estimators": 10
     },
     "gdbt-64": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 0.5,
         "n_estimators": 100
     },
     "gdbt-65": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 0.5,
         "n_estimators": 200
     },
     "gdbt-66": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 1,
         "n_estimators": 10
     },
     "gdbt-67": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 1,
         "n_estimators": 100
     },
     "gdbt-68": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 1,
         "n_estimators": 200
     },
     "gdbt-69": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 2,
         "n_estimators": 10
     },
     "gdbt-70": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 2,
         "n_estimators": 100
     },
     "gdbt-71": {
         "loss": "huber",
-        "criterion": "squared_error",
+        "criterion": "friedman_mse",
         "learning_rate": 2,
         "n_estimators": 200
     },
     "gdbt-72": {
-        "loss": "huber",
+        "loss": "quantile",
         "criterion": "squared_error",
-        "learning_rate": 5,
+        "learning_rate": 0.1,
         "n_estimators": 10
     },
     "gdbt-73": {
-        "loss": "huber",
+        "loss": "quantile",
         "criterion": "squared_error",
-        "learning_rate": 5,
+        "learning_rate": 0.1,
         "n_estimators": 100
     },
     "gdbt-74": {
-        "loss": "huber",
+        "loss": "quantile",
         "criterion": "squared_error",
-        "learning_rate": 5,
+        "learning_rate": 0.1,
         "n_estimators": 200
     },
     "gdbt-75": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 10
     },
     "gdbt-76": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.1,
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
         "n_estimators": 100
     },
     "gdbt-77": {
-        "loss": "huber",
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 0.5,
+        "n_estimators": 200
+    },
+    "gdbt-78": {
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 1,
+        "n_estimators": 10
+    },
+    "gdbt-79": {
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 1,
+        "n_estimators": 100
+    },
+    "gdbt-80": {
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 1,
+        "n_estimators": 200
+    },
+    "gdbt-81": {
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 2,
+        "n_estimators": 10
+    },
+    "gdbt-82": {
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 2,
+        "n_estimators": 100
+    },
+    "gdbt-83": {
+        "loss": "quantile",
+        "criterion": "squared_error",
+        "learning_rate": 2,
+        "n_estimators": 200
+    },
+    "gdbt-84": {
+        "loss": "quantile",
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
+        "n_estimators": 10
+    },
+    "gdbt-85": {
+        "loss": "quantile",
+        "criterion": "friedman_mse",
+        "learning_rate": 0.1,
+        "n_estimators": 100
+    },
+    "gdbt-86": {
+        "loss": "quantile",
         "criterion": "friedman_mse",
         "learning_rate": 0.1,
         "n_estimators": 200
     },
-    "gdbt-78": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
-        "n_estimators": 10
-    },
-    "gdbt-79": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
-        "n_estimators": 100
-    },
-    "gdbt-80": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
-        "n_estimators": 200
-    },
-    "gdbt-81": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
-        "n_estimators": 10
-    },
-    "gdbt-82": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
-        "n_estimators": 100
-    },
-    "gdbt-83": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
-        "n_estimators": 200
-    },
-    "gdbt-84": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
-        "n_estimators": 10
-    },
-    "gdbt-85": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
-        "n_estimators": 100
-    },
-    "gdbt-86": {
-        "loss": "huber",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
-        "n_estimators": 200
-    },
     "gdbt-87": {
-        "loss": "huber",
+        "loss": "quantile",
         "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "learning_rate": 0.5,
         "n_estimators": 10
     },
     "gdbt-88": {
-        "loss": "huber",
+        "loss": "quantile",
         "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "learning_rate": 0.5,
         "n_estimators": 100
     },
     "gdbt-89": {
-        "loss": "huber",
+        "loss": "quantile",
         "criterion": "friedman_mse",
-        "learning_rate": 5,
+        "learning_rate": 0.5,
         "n_estimators": 200
     },
     "gdbt-90": {
         "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 0.1,
+        "criterion": "friedman_mse",
+        "learning_rate": 1,
         "n_estimators": 10
     },
     "gdbt-91": {
         "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 0.1,
+        "criterion": "friedman_mse",
+        "learning_rate": 1,
         "n_estimators": 100
     },
     "gdbt-92": {
         "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 0.1,
+        "criterion": "friedman_mse",
+        "learning_rate": 1,
         "n_estimators": 200
     },
     "gdbt-93": {
         "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 0.5,
+        "criterion": "friedman_mse",
+        "learning_rate": 2,
         "n_estimators": 10
     },
     "gdbt-94": {
         "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 0.5,
+        "criterion": "friedman_mse",
+        "learning_rate": 2,
         "n_estimators": 100
     },
     "gdbt-95": {
         "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 0.5,
-        "n_estimators": 200
-    },
-    "gdbt-96": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 1,
-        "n_estimators": 10
-    },
-    "gdbt-97": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 1,
-        "n_estimators": 100
-    },
-    "gdbt-98": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 1,
-        "n_estimators": 200
-    },
-    "gdbt-99": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 2,
-        "n_estimators": 10
-    },
-    "gdbt-100": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 2,
-        "n_estimators": 100
-    },
-    "gdbt-101": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 2,
-        "n_estimators": 200
-    },
-    "gdbt-102": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 5,
-        "n_estimators": 10
-    },
-    "gdbt-103": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 5,
-        "n_estimators": 100
-    },
-    "gdbt-104": {
-        "loss": "quantile",
-        "criterion": "squared_error",
-        "learning_rate": 5,
-        "n_estimators": 200
-    },
-    "gdbt-105": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.1,
-        "n_estimators": 10
-    },
-    "gdbt-106": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.1,
-        "n_estimators": 100
-    },
-    "gdbt-107": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.1,
-        "n_estimators": 200
-    },
-    "gdbt-108": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
-        "n_estimators": 10
-    },
-    "gdbt-109": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
-        "n_estimators": 100
-    },
-    "gdbt-110": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 0.5,
-        "n_estimators": 200
-    },
-    "gdbt-111": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
-        "n_estimators": 10
-    },
-    "gdbt-112": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
-        "n_estimators": 100
-    },
-    "gdbt-113": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 1,
-        "n_estimators": 200
-    },
-    "gdbt-114": {
-        "loss": "quantile",
         "criterion": "friedman_mse",
         "learning_rate": 2,
-        "n_estimators": 10
-    },
-    "gdbt-115": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
-        "n_estimators": 100
-    },
-    "gdbt-116": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 2,
-        "n_estimators": 200
-    },
-    "gdbt-117": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
-        "n_estimators": 10
-    },
-    "gdbt-118": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
-        "n_estimators": 100
-    },
-    "gdbt-119": {
-        "loss": "quantile",
-        "criterion": "friedman_mse",
-        "learning_rate": 5,
         "n_estimators": 200
     },
     "poly_ridge-0": {
@@ -1035,67 +841,55 @@
         "kernel": "sigmoid"
     },
     "svm_NuSVR-3": {
-        "nu": 0.1,
-        "kernel": "precomputed"
+        "nu": 0.5,
+        "kernel": "linear"
     },
     "svm_NuSVR-4": {
         "nu": 0.5,
-        "kernel": "linear"
+        "kernel": "rbf"
     },
     "svm_NuSVR-5": {
         "nu": 0.5,
-        "kernel": "rbf"
-    },
-    "svm_NuSVR-6": {
-        "nu": 0.5,
         "kernel": "sigmoid"
     },
-    "svm_NuSVR-7": {
-        "nu": 0.5,
-        "kernel": "precomputed"
-    },
-    "svm_NuSVR-8": {
+    "svm_NuSVR-6": {
         "nu": 1.0,
         "kernel": "linear"
     },
-    "svm_NuSVR-9": {
+    "svm_NuSVR-7": {
         "nu": 1.0,
         "kernel": "rbf"
     },
-    "svm_NuSVR-10": {
+    "svm_NuSVR-8": {
         "nu": 1.0,
         "kernel": "sigmoid"
     },
+    "svm_NuSVR-9": {
+        "nu": 0.1,
+        "kernel": "poly",
+        "degree": 3
+    },
+    "svm_NuSVR-10": {
+        "nu": 0.1,
+        "kernel": "poly",
+        "degree": 5
+    },
     "svm_NuSVR-11": {
-        "nu": 1.0,
-        "kernel": "precomputed"
+        "nu": 0.5,
+        "kernel": "poly",
+        "degree": 3
     },
     "svm_NuSVR-12": {
-        "nu": 0.1,
+        "nu": 0.5,
         "kernel": "poly",
-        "degree": 3
+        "degree": 5
     },
     "svm_NuSVR-13": {
-        "nu": 0.1,
-        "kernel": "poly",
-        "degree": 5
-    },
-    "svm_NuSVR-14": {
-        "nu": 0.5,
-        "kernel": "poly",
-        "degree": 3
-    },
-    "svm_NuSVR-15": {
-        "nu": 0.5,
-        "kernel": "poly",
-        "degree": 5
-    },
-    "svm_NuSVR-16": {
         "nu": 1.0,
         "kernel": "poly",
         "degree": 3
     },
-    "svm_NuSVR-17": {
+    "svm_NuSVR-14": {
         "nu": 1.0,
         "kernel": "poly",
         "degree": 5
@@ -1512,83 +1306,53 @@
     },
     "kNN_Radius-2": {
         "radius": 0.5,
-        "weights": "uniform",
-        "algorithm": "brute"
+        "weights": "distance",
+        "algorithm": "ball_tree"
     },
     "kNN_Radius-3": {
         "radius": 0.5,
         "weights": "distance",
-        "algorithm": "ball_tree"
-    },
-    "kNN_Radius-4": {
-        "radius": 0.5,
-        "weights": "distance",
         "algorithm": "kd_tree"
     },
+    "kNN_Radius-4": {
+        "radius": 1,
+        "weights": "uniform",
+        "algorithm": "ball_tree"
+    },
     "kNN_Radius-5": {
-        "radius": 0.5,
-        "weights": "distance",
-        "algorithm": "brute"
+        "radius": 1,
+        "weights": "uniform",
+        "algorithm": "kd_tree"
     },
     "kNN_Radius-6": {
         "radius": 1,
-        "weights": "uniform",
+        "weights": "distance",
         "algorithm": "ball_tree"
     },
     "kNN_Radius-7": {
         "radius": 1,
-        "weights": "uniform",
+        "weights": "distance",
         "algorithm": "kd_tree"
     },
     "kNN_Radius-8": {
-        "radius": 1,
+        "radius": 2,
         "weights": "uniform",
-        "algorithm": "brute"
+        "algorithm": "ball_tree"
     },
     "kNN_Radius-9": {
-        "radius": 1,
-        "weights": "distance",
-        "algorithm": "ball_tree"
+        "radius": 2,
+        "weights": "uniform",
+        "algorithm": "kd_tree"
     },
     "kNN_Radius-10": {
-        "radius": 1,
+        "radius": 2,
         "weights": "distance",
-        "algorithm": "kd_tree"
+        "algorithm": "ball_tree"
     },
     "kNN_Radius-11": {
-        "radius": 1,
-        "weights": "distance",
-        "algorithm": "brute"
-    },
-    "kNN_Radius-12": {
-        "radius": 2,
-        "weights": "uniform",
-        "algorithm": "ball_tree"
-    },
-    "kNN_Radius-13": {
-        "radius": 2,
-        "weights": "uniform",
-        "algorithm": "kd_tree"
-    },
-    "kNN_Radius-14": {
-        "radius": 2,
-        "weights": "uniform",
-        "algorithm": "brute"
-    },
-    "kNN_Radius-15": {
-        "radius": 2,
-        "weights": "distance",
-        "algorithm": "ball_tree"
-    },
-    "kNN_Radius-16": {
         "radius": 2,
         "weights": "distance",
         "algorithm": "kd_tree"
-    },
-    "kNN_Radius-17": {
-        "radius": 2,
-        "weights": "distance",
-        "algorithm": "brute"
     },
     "svm_LinearSVR-0": {
         "epsilon": 0.0,
@@ -1675,198 +1439,170 @@
         "degree": 5
     },
     "lasso-0": {
-        "alpha": 0.05,
+        "alpha": 0.1,
         "selection": "cyclic"
     },
     "lasso-1": {
-        "alpha": 0.05,
+        "alpha": 0.1,
         "selection": "random"
     },
     "lasso-2": {
-        "alpha": 0.1,
+        "alpha": 0.5,
         "selection": "cyclic"
     },
     "lasso-3": {
-        "alpha": 0.1,
+        "alpha": 0.5,
         "selection": "random"
     },
     "lasso-4": {
-        "alpha": 0.5,
+        "alpha": 1,
         "selection": "cyclic"
     },
     "lasso-5": {
-        "alpha": 0.5,
+        "alpha": 1,
         "selection": "random"
     },
     "lasso-6": {
-        "alpha": 1,
+        "alpha": 2,
         "selection": "cyclic"
     },
     "lasso-7": {
-        "alpha": 1,
+        "alpha": 2,
         "selection": "random"
     },
     "lasso-8": {
-        "alpha": 2,
+        "alpha": 5,
         "selection": "cyclic"
     },
     "lasso-9": {
-        "alpha": 2,
+        "alpha": 5,
         "selection": "random"
     },
     "lasso-10": {
-        "alpha": 5,
-        "selection": "cyclic"
-    },
-    "lasso-11": {
-        "alpha": 5,
-        "selection": "random"
-    },
-    "lasso-12": {
         "alpha": 10,
         "selection": "cyclic"
     },
-    "lasso-13": {
+    "lasso-11": {
         "alpha": 10,
         "selection": "random"
     },
     "ridge-0": {
-        "alpha": 0.05,
+        "alpha": 0.1,
         "solver": "svd"
     },
     "ridge-1": {
-        "alpha": 0.05,
+        "alpha": 0.1,
         "solver": "cholesky"
     },
     "ridge-2": {
-        "alpha": 0.05,
+        "alpha": 0.1,
         "solver": "lsqr"
     },
     "ridge-3": {
-        "alpha": 0.05,
+        "alpha": 0.1,
         "solver": "sag"
     },
     "ridge-4": {
-        "alpha": 0.05,
+        "alpha": 0.1,
         "solver": "lbfgs"
     },
     "ridge-5": {
-        "alpha": 0.1,
+        "alpha": 0.5,
         "solver": "svd"
     },
     "ridge-6": {
-        "alpha": 0.1,
+        "alpha": 0.5,
         "solver": "cholesky"
     },
     "ridge-7": {
-        "alpha": 0.1,
+        "alpha": 0.5,
         "solver": "lsqr"
     },
     "ridge-8": {
-        "alpha": 0.1,
+        "alpha": 0.5,
         "solver": "sag"
     },
     "ridge-9": {
-        "alpha": 0.1,
+        "alpha": 0.5,
         "solver": "lbfgs"
     },
     "ridge-10": {
-        "alpha": 0.5,
+        "alpha": 1,
         "solver": "svd"
     },
     "ridge-11": {
-        "alpha": 0.5,
+        "alpha": 1,
         "solver": "cholesky"
     },
     "ridge-12": {
-        "alpha": 0.5,
+        "alpha": 1,
         "solver": "lsqr"
     },
     "ridge-13": {
-        "alpha": 0.5,
+        "alpha": 1,
         "solver": "sag"
     },
     "ridge-14": {
-        "alpha": 0.5,
+        "alpha": 1,
         "solver": "lbfgs"
     },
     "ridge-15": {
-        "alpha": 1,
+        "alpha": 2,
         "solver": "svd"
     },
     "ridge-16": {
-        "alpha": 1,
+        "alpha": 2,
         "solver": "cholesky"
     },
     "ridge-17": {
-        "alpha": 1,
+        "alpha": 2,
         "solver": "lsqr"
     },
     "ridge-18": {
-        "alpha": 1,
+        "alpha": 2,
         "solver": "sag"
     },
     "ridge-19": {
-        "alpha": 1,
+        "alpha": 2,
         "solver": "lbfgs"
     },
     "ridge-20": {
-        "alpha": 2,
+        "alpha": 5,
         "solver": "svd"
     },
     "ridge-21": {
-        "alpha": 2,
+        "alpha": 5,
         "solver": "cholesky"
     },
     "ridge-22": {
-        "alpha": 2,
+        "alpha": 5,
         "solver": "lsqr"
     },
     "ridge-23": {
-        "alpha": 2,
+        "alpha": 5,
         "solver": "sag"
     },
     "ridge-24": {
-        "alpha": 2,
+        "alpha": 5,
         "solver": "lbfgs"
     },
     "ridge-25": {
-        "alpha": 5,
+        "alpha": 10,
         "solver": "svd"
     },
     "ridge-26": {
-        "alpha": 5,
+        "alpha": 10,
         "solver": "cholesky"
     },
     "ridge-27": {
-        "alpha": 5,
+        "alpha": 10,
         "solver": "lsqr"
     },
     "ridge-28": {
-        "alpha": 5,
+        "alpha": 10,
         "solver": "sag"
     },
     "ridge-29": {
-        "alpha": 5,
-        "solver": "lbfgs"
-    },
-    "ridge-30": {
-        "alpha": 10,
-        "solver": "svd"
-    },
-    "ridge-31": {
-        "alpha": 10,
-        "solver": "cholesky"
-    },
-    "ridge-32": {
-        "alpha": 10,
-        "solver": "lsqr"
-    },
-    "ridge-33": {
-        "alpha": 10,
-        "solver": "sag"
-    },
-    "ridge-34": {
         "alpha": 10,
         "solver": "lbfgs"
     },

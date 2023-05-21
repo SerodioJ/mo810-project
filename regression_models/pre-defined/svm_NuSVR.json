@@ -35,8 +35,7 @@
             "kernel": [
                 "linear",
                 "rbf",
-                "sigmoid",
-                "precomputed"
+                "sigmoid"
             ]
         },
         {
