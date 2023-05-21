@@ -144,7 +144,7 @@ class ClusteringEval:
     def cluster(self, args):
         wrapper = Cluster
 
-        metrics = [{metric} for metric in wrapper.metrics.keys()]
+        metrics = [metric for metric in wrapper.metrics.keys()]
         csv_columns = ["model", "feature_set", *metrics, "sucess", "time"]
 
         with open(

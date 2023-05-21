@@ -6,7 +6,6 @@ from sklearn.impute import SimpleImputer
 from sklearn.metrics import (
     homogeneity_completeness_v_measure,
     rand_score,
-    silhouette_score,
 )
 
 from utils import split_module_class
@@ -60,7 +59,7 @@ class Cluster:
                     results.append(self.model.inertia_)
                 else:
                     results.append(0)
-            if t == 1:
+            elif t == 1:
                 results.append(metric(y_hat, y_pred))
             else:
                 if t in repeated:
