@@ -1,0 +1,37 @@
+{
+    "name": "DBSCAN",
+    "module": "sklearn.cluster.DBSCAN",
+    "parameters": {
+        "eps": "float",
+        "min_samples": "int",
+        "metric": "str",
+        "metric_params": "dict",
+        "algorithm": [
+            "auto",
+            "ball_tree",
+            "kd_tree",
+            "brute"
+        ],
+        "leaf_size": "int",
+        "p": "float",
+        "n_jobs": "int"
+    },
+    "preprocessing": [
+        {
+            "name": "MinMax Scaler",
+            "module": "sklearn.preprocessing.MinMaxScaler",
+            "parameters": {
+                "copy": "bool"
+            }
+        }
+    ],
+    "hyperparameter_exploration": [
+        {
+            "eps": [0.2, 0.5, 0.75],
+            "min_samples": [5, 10],
+            "algorithm": [
+                "kd_tree"
+            ]
+        }
+    ]
+}

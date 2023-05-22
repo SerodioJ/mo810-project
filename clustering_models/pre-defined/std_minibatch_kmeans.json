@@ -1,0 +1,54 @@
+{
+    "name": "Mini Batch k Means",
+    "module": "sklearn.cluster.MiniBatchKMeans",
+    "parameters": {
+        "n_clusters": "int",
+        "init": [
+            "k-means++",
+            "random"
+        ],
+        "max_iter": "int",
+        "batch_size": "int",
+        "verbose": "int",
+        "compute_labels": "bool",
+        "random_state": "int",
+        "tol": "float",
+        "max_no_improvement": "int",
+        "init_size": "int",
+        "n_init": "int",
+        "reassignment_ratio": "float"
+    },
+    "preprocessing": [
+        {
+            "name": "Standard Scaler",
+            "module": "sklearn.preprocessing.StandardScaler",
+            "parameters": {
+                "copy": "bool"
+            }
+        }
+    ],
+    "hyperparameter_exploration": [
+        {
+            "n_clusters": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "n_init": [
+                10
+            ],
+            "init": [
+                "k-means++"
+            ],
+            "batch_size": [
+                1024
+            ]
+        }
+    ]
+}

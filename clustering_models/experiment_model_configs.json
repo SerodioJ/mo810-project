@@ -1,0 +1,8 @@
+{
+    "minmax_minibatch_kmeans-0": {
+        "n_clusters": 2,
+        "n_init": 10,
+        "init": "k-means++",
+        "batch_size": 1024
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "cluster": {
+        "all_no_window": [
+            "raw",
+            "env",
+            "cos",
+            "freq",
+            "x",
+            "y",
+            "z"
+        ]
+    }
+}
