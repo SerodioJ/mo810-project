@@ -19,7 +19,7 @@ class Cluster:
         "v_measure": (2, homogeneity_completeness_v_measure),
         "rand": (1, rand_score),
         "inertia": (0, None),
-        "noise": (0, None)
+        "noise": (0, None),
     }
 
     def __init__(
@@ -57,7 +57,7 @@ class Cluster:
         for t, metric in self.metrics.values():
             if t in repeated:
                 continue
-            if t == 0: # Model specific metric
+            if t == 0:  # Model specific metric
                 if hasattr(self.model["cluster"], "inertia_"):
                     results.append(self.model["cluster"].inertia_)
                     results.append(0)
@@ -70,7 +70,6 @@ class Cluster:
                     n_noise_ = list(labels).count(-1)
                     results.append(n_noise_)
                 repeated.append(t)
-                    
 
             elif t == 1:
                 results.append(metric(y_hat, y_pred))

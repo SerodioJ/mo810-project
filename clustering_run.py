@@ -41,6 +41,7 @@ def cluster_data_lazy(
         r.value = metrics[i]
     success_flag.value = 1
 
+
 def cluster_inline(
     model_file,
     wrapper_class,
@@ -55,13 +56,17 @@ def cluster_inline(
         wrapper_class=wrapper_class, model_file=model_file, hyperparams=parameters
     )
     inlines = shape[0]
-    inline_size = shape[1]*shape[2]
-    
+    inline_size = shape[1] * shape[2]
+
     inlines_metrics = np.zeros((len(model.metrics), shape[0]))
 
     for i in range(inlines):
-        labels_pred = model.fit_predict(dask_data[i*inline_size:(i+1)*inline_size])
-        metrics = model.compute_metrics(labels_pred, labels_true[i*inline_size:(i+1)*inline_size])
+        labels_pred = model.fit_predict(
+            dask_data[i * inline_size : (i + 1) * inline_size]
+        )
+        metrics = model.compute_metrics(
+            labels_pred, labels_true[i * inline_size : (i + 1) * inline_size]
+        )
         for j, metric in enumerate(metrics):
             inlines_metrics[j][i] = metric
 
@@ -70,6 +75,7 @@ def cluster_inline(
     for i, r in enumerate(results):
         r.value = metrics[i]
     success_flag.value = 1
+
 
 def cluster_data(
     model_file,
@@ -93,10 +99,15 @@ def cluster_data(
     success_flag.value = 1
 
 
-
-
 def cluster_eval(
-    model_dir, model_config, data_features, wrapper_class, csv_columns, dask_dataframe, process, inline
+    model_dir,
+    model_config,
+    data_features,
+    wrapper_class,
+    csv_columns,
+    dask_dataframe,
+    process,
+    inline,
 ):
     results_size = len(wrapper_class.metrics)
     results = [Value("d", 0.0) for _ in range(results_size)]
@@ -121,7 +132,7 @@ def cluster_eval(
                     labels_true = np.load("data/F3_train_labels.npy")
                     shape = labels_true.shape
                     labels_true = labels_true.flatten()
-                    
+
                 for model, parameters in tqdm(
                     model_config.items(), desc="model", position=2
                 ):
@@ -149,24 +160,28 @@ def cluster_eval(
                         time = perf_counter() - start
                     elif inline:
                         start = perf_counter()
-                        cluster_inline(model_file,
-                                wrapper_class,
-                                parameters,
-                                dask_data,
-                                labels_true,
-                                shape,
-                                success,
-                                *results,)
+                        cluster_inline(
+                            model_file,
+                            wrapper_class,
+                            parameters,
+                            dask_data,
+                            labels_true,
+                            shape,
+                            success,
+                            *results,
+                        )
                         time = perf_counter() - start
                     else:
                         start = perf_counter()
-                        cluster_data(model_file,
-                                wrapper_class,
-                                parameters,
-                                dask_data,
-                                labels_true,
-                                success,
-                                *results,)
+                        cluster_data(
+                            model_file,
+                            wrapper_class,
+                            parameters,
+                            dask_data,
+                            labels_true,
+                            success,
+                            *results,
+                        )
                         time = perf_counter() - start
                     row = [
                         model,
@@ -263,7 +278,7 @@ class ClusteringEval:
                 csv_columns,
                 args.dask_dataframe,
                 args.process,
-                args.inline
+                args.inline,
             )
 
 
