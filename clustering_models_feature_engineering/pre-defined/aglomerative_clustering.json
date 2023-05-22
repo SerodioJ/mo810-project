@@ -1,0 +1,31 @@
+{
+    "name": "Aglomerative Clustering",
+    "module": "sklearn.cluster.AgglomerativeClustering",
+    "parameters": {
+        "n_clusters": "int",
+        "affinity": "str",
+        "metric": "str",
+        "metric_params": "dict",
+        "memory": "str",
+        "connectivity": "array",
+        "compute_full_tree": [
+            "bool",
+            "auto"
+        ],
+        "linkage": [
+            "ward",
+            "complete",
+            "average",
+            "single"
+        ],
+        "distance_threshold": "float",
+        "compute_distances": "bool"
+    },
+    "hyperparameter_exploration": [
+        {
+            "n_clusters": [
+                5
+            ]
+        }
+    ]
+}

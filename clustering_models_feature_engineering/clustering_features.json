@@ -1,0 +1,117 @@
+{
+    "cluster": {
+        "raw_no_window": [
+            "raw",
+            "x",
+            "y",
+            "z"
+        ],
+        "env_no_window": [
+            "env",
+            "x",
+            "y",
+            "z"
+        ],
+        "cos_no_window": [
+            "cos",
+            "x",
+            "y",
+            "z"
+        ],
+        "freq_no_window": [
+            "freq",
+            "x",
+            "y",
+            "z"
+        ],
+        "all_no_window": [
+            "raw",
+            "env",
+            "cos",
+            "freq",
+            "x",
+            "y",
+            "z"
+        ],
+        "raw_window_v": [
+            "raw",
+            "-1x_raw",
+            "1x_raw",
+            "-1y_raw",
+            "1y_raw",
+            "-1z_raw",
+            "1z_raw",
+            "x",
+            "y",
+            "z"
+        ],
+        "env_window_v": [
+            "env",
+            "-1x_env",
+            "1x_env",
+            "-1y_env",
+            "1y_env",
+            "-1z_env",
+            "1z_env",
+            "x",
+            "y",
+            "z"
+        ],
+        "cos_window_v": [
+            "cos",
+            "-1x_cos",
+            "1x_cos",
+            "-1y_cos",
+            "1y_cos",
+            "-1z_cos",
+            "1z_cos",
+            "x",
+            "y",
+            "z"
+        ],
+        "freq_window_v": [
+            "freq",
+            "-1x_freq",
+            "1x_freq",
+            "-1y_freq",
+            "1y_freq",
+            "-1z_freq",
+            "1z_freq",
+            "x",
+            "y",
+            "z"
+        ],
+        "all_window_v": [
+            "raw",
+            "-1x_raw",
+            "1x_raw",
+            "-1y_raw",
+            "1y_raw",
+            "-1z_raw",
+            "env",
+            "-1x_env",
+            "1x_env",
+            "-1y_env",
+            "1y_env",
+            "-1z_env",
+            "1z_env",
+            "cos",
+            "-1x_cos",
+            "1x_cos",
+            "-1y_cos",
+            "1y_cos",
+            "-1z_cos",
+            "1z_cos",
+            "freq",
+            "-1x_freq",
+            "1x_freq",
+            "-1y_freq",
+            "1y_freq",
+            "-1z_freq",
+            "1z_freq",
+            "x",
+            "y",
+            "z"
+        ]
+    }
+}

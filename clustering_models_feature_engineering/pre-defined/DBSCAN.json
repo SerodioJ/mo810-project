@@ -1,0 +1,26 @@
+{
+    "name": "DBSCAN",
+    "module": "sklearn.cluster.DBSCAN",
+    "parameters": {
+        "eps": "float",
+        "min_samples": "int",
+        "metric": "str",
+        "metric_params": "dict",
+        "algorithm": [
+            "auto",
+            "ball_tree",
+            "kd_tree",
+            "brute"
+        ],
+        "leaf_size": "int",
+        "p": "float",
+        "n_jobs": "int"
+    },
+    "hyperparameter_exploration": [
+        {
+            "default": [
+                true
+            ]
+        }
+    ]
+}

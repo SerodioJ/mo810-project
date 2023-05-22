@@ -1,0 +1,8 @@
+{
+    "minibatch_kmeans-0": {
+        "n_clusters": 5
+    },
+    "kmeans-0": {
+        "n_clusters": 5
+    }
+}

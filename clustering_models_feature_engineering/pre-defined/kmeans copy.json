@@ -1,0 +1,23 @@
+{
+    "name": "k Means",
+    "module": "sklearn.cluster.KMeans",
+    "parameters": {
+        "n_clusters": "int",
+        "init": ["k-means++", "random"],
+        "n_init": "int",
+        "max_iter": "int",
+        "tol": "float",
+        "verbose": "int",
+        "random_state": "int",
+        "copy_x": "bool",
+        "algorithm": ["lloyd", "elkan", "auto", "full"]
+    },
+    "hyperparameter_exploration": [
+        {
+            "n_clusters": [
+                5
+            ]
+        }
+    ]
+
+}
