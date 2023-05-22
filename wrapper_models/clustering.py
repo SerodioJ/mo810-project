@@ -42,10 +42,10 @@ class Cluster:
         )
         if pre_stages:
             self.model = Pipeline(
-                [("nan_fix", imputer), *pre_stages, ("regresion", self.model)]
+                [("nan_fix", imputer), *pre_stages, ("cluster", self.model)]
             )
         else:
-            self.model = Pipeline([("nan_fix", imputer), ("regresion", self.model)])
+            self.model = Pipeline([("nan_fix", imputer), ("cluster", self.model)])
 
     def fit_predict(self, X):
         return self.model.fit_predict(X)
@@ -55,8 +55,8 @@ class Cluster:
         repeated = []
         for t, metric in self.metrics.values():
             if t == 0:
-                if hasattr(self.model, "inertia__"):
-                    results.append(self.model.inertia_)
+                if hasattr(self.model["cluster"], "inertia__"):
+                    results.append(self.model["cluster"].inertia_)
                 else:
                     results.append(0)
             elif t == 1:

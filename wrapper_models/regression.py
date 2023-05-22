@@ -37,11 +37,11 @@ class Regressor:
         )
         if pre_stages:
             self.model = ParallelPostFit(
-                Pipeline([("nan_fix", imputer), *pre_stages, ("regresion", self.model)])
+                Pipeline([("nan_fix", imputer), *pre_stages, ("regression", self.model)])
             )
         else:
             self.model = ParallelPostFit(
-                Pipeline([("nan_fix", imputer), ("regresion", self.model)])
+                Pipeline([("nan_fix", imputer), ("regression", self.model)])
             )
 
     def fit(self, X, y):
