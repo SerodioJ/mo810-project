@@ -15,7 +15,7 @@ from wrapper_models import Cluster
 from utils import instantiate_model, test_model_creation
 
 
-def cluster_data(
+def cluster_data_lazy(
     model_file,
     wrapper_class,
     parameters,
@@ -32,22 +32,42 @@ def cluster_data(
     pandas_df = ddf.read_parquet(
         dask_dataframe, index="index", calculate_divisions=True
     )
-    print("AA")
     X = pandas_df[features].values
     labels_pred = model.fit_predict(X)
     labels_true = np.load("data/F3_train_labels.npy")
     labels_true = labels_true.flatten()
-    print("HERE")
 
     metrics = model.compute_metrics(labels_pred, labels_true)
-    print(metrics)
+    for i, r in enumerate(results):
+        r.value = metrics[i]
+    success_flag.value = 1
+
+def cluster_data(
+    model_file,
+    wrapper_class,
+    parameters,
+    dask_data,
+    labels_true,
+    success_flag,
+    *results,
+):
+    model = instantiate_model(
+        wrapper_class=wrapper_class, model_file=model_file, hyperparams=parameters
+    )
+
+    # Training and Training metrics
+    labels_pred = model.fit_predict(dask_data)
+
+    metrics = model.compute_metrics(labels_pred, labels_true)
     for i, r in enumerate(results):
         r.value = metrics[i]
     success_flag.value = 1
 
 
+
+
 def cluster_eval(
-    model_dir, model_config, data_features, wrapper_class, csv_columns, dask_dataframe
+    model_dir, model_config, data_features, wrapper_class, csv_columns, dask_dataframe, process
 ):
     results_size = len(wrapper_class.metrics)
     results = [Value("d", 0.0) for _ in range(results_size)]
@@ -64,6 +84,14 @@ def cluster_eval(
             for set_name, features in tqdm(
                 feature_sets.items(), desc="feature_set", position=1
             ):
+                if not process:
+                    dask_data = ddf.read_parquet(
+                        dask_dataframe, index="index", calculate_divisions=True
+                    )
+                    dask_data = dask_data[features].values.compute()
+                    labels_true = np.load("data/F3_train_labels.npy")
+                    labels_true = labels_true.flatten()
+                    
                 for model, parameters in tqdm(
                     model_config.items(), desc="model", position=2
                 ):
@@ -72,22 +100,33 @@ def cluster_eval(
                     for r in results:
                         r.value = 0.0
                     success.value = 0
-                    p = Process(
-                        target=cluster_data,
-                        args=(
-                            model_file,
-                            wrapper_class,
-                            parameters,
-                            features,
-                            dask_dataframe,
-                            success,
-                            *results,
-                        ),
-                    )
-                    start = perf_counter()
-                    p.start()
-                    p.join()
-                    time = perf_counter() - start
+                    if process:
+                        p = Process(
+                            target=cluster_data_lazy,
+                            args=(
+                                model_file,
+                                wrapper_class,
+                                parameters,
+                                features,
+                                dask_dataframe,
+                                success,
+                                *results,
+                            ),
+                        )
+                        start = perf_counter()
+                        p.start()
+                        p.join()
+                        time = perf_counter() - start
+                    else:
+                        start = perf_counter()
+                        cluster_data(model_file,
+                                wrapper_class,
+                                parameters,
+                                dask_data,
+                                labels_true,
+                                success,
+                                *results,)
+                        time = perf_counter() - start
                     row = [
                         model,
                         set_name,
@@ -133,6 +172,13 @@ class ClusteringEval:
             action="store_true",
         )
 
+        parser.add_argument(
+            "-p",
+            "--process",
+            help="runs training and prediction on diferent process, loading data from disk on every computation",
+            action="store_true",
+        )
+
         args = parser.parse_args()
         if not hasattr(self, args.command):
             print("Invalid command")
@@ -168,6 +214,7 @@ class ClusteringEval:
                 wrapper,
                 csv_columns,
                 args.dask_dataframe,
+                args.process
             )
 
 
